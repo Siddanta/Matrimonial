@@ -1,0 +1,45 @@
+
+
+
+<head>
+    <title>project</title>
+
+{% load staticfiles %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+
+
+
+<nav class="navbar navbar-light bg-dark" style="height: 70px">
+
+
+    <img class="rounded-circle d-inline visible" src="{% static 'home/LG.jpg' %}" id="logo"
+            style ="background-color:white;background-position:top; height: 50px">&nbsp; &nbsp; &nbsp;
+
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item active">
+                    <a class="btn btn-outline-secondary" style="" href="../../../accounts/login">Login </a>
+                    </li>
+        <li class="nav-item active">
+
+                    <a class=" btn btn-outline-secondary" href="../../../accounts/register">Register</a>
+        </li>
+        </ul>
+    </nav>
+</nav>
+
+<nav style=""><img src="{% static 'home/home 2.jpg' %}" style="height: 700px;width: 1440px " > </nav>
+
+
+
+
+</body>
+{% block body %}
+{% endblock %}
+{%block content%}
+{% endblock %}
