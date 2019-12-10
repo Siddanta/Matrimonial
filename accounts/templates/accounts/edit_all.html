@@ -1,0 +1,15 @@
+{%extends 'accounts/base1.html' %}
+{% block body%}
+    <nav class="navbar navbar-light bg-light" ">
+<form class="form-inline">
+
+     <ul class="navbar-nav mr-auto">
+         <li class="nav-item">
+        <a class="nav-link" href="../../accounts/edit_username" >Edit Your Username <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../../accounts/password">Edit Your Password <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'accounts:edit_register1' user.id %}">Edit Your all Details<span class="sr-only">(current)</span></a>
+         </li>
+     </ul>
+  </form>
+
+{%endblock%}

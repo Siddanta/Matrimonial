@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+
+</head>
+
+<body style="background-color:white;">
+    <nav class="navbar navbar-light navbar-expand-md" style=" height: 70px ;background-color:rgb(78,77,77);">
+        <div class="container-fluid"><a class="navbar-brand" href="../../home" style="font-family:Cookie, cursive;font-size:35px;color:rgba(7,0,0,0.9);"><img class="rounded-circle d-inline visible" src="{% static 'home/marry-wedding-logo-5a2e697b901089.7651329815129910995901.jpg' %}" id="logo" style="background-color:#1f1919;background-position:top; height: 50px">&nbsp; &nbsp; &nbsp;<em>LAGANGATHO</em></a>
+            <button
+                class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+
+        </div>
+    </nav>
+{% block body %}
+{% endblock %}

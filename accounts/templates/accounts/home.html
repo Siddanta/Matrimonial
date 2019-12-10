@@ -1,0 +1,87 @@
+{% extends 'accounts/base1.html' %}
+
+
+
+{%block body%}
+<p>
+
+
+
+    </p>
+<br>
+
+
+
+<!--{%if messages%}-->
+    <!--Like list<br>-->
+
+<!--{%for message in messages%}-->
+<!--{{message}} by {{a}}-->
+<!--{%endfor%}-->
+    <!--{%endif%}-->
+
+
+
+</li>
+
+{%for match, percent in matches%}
+Suggested Matches
+
+<a href="{%url 'accounts:detail' match%}">{{match}}--{{percent|floatformat:2}}%</a> <br>
+<img src="{{match.details.PhotoFile.url}}" >
+{%endfor%}
+
+
+
+
+<table><div class="col-lg-auto" style="margin-left: 800px; ">
+    Suggested
+    <br>
+{% for each in object %}
+
+
+
+
+
+        {%if each.PhotoFile%}
+        <li> <a href="{% url 'accounts:detail' each %}">
+
+        <img src="{{each.PhotoFile.url}}"  width="100" class="img-responsive" /></a>
+    <br>
+
+    {{each.Fname}} {{each.Lname}}
+    </li>
+
+
+
+        {%endif%}
+
+
+<!--<p >{{each.Gender}} </p>-->
+
+{%endfor%}
+
+
+</div>
+</table>
+
+    <br>
+
+    <br>
+
+
+<div class="col-md" style="margin-left: 400px;margin-bottom: 100px;">
+
+
+     <br>
+    {%for mutual in mutual_likes %}
+    Mutual Like List
+
+        <a href="{%url 'accounts:detail' mutual%}">{{mutual}}</a><br>
+        <!--<img src="{{mutual.detail.PhotoFile.url}}"  width="150" class="img-responsive" /></a>-->
+    {%endfor%}
+
+    </div>
+
+
+{%endblock%}

@@ -1,0 +1,108 @@
+{%extends 'accounts/base2.html'%}
+
+{% block body %}
+
+
+<style>
+
+    hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+</style>
+{% load static %}
+
+    <nav class="navbar navbar-light navbar-expand-md" style="background-color: white; height: 300px; width: 800px;margin-top: 100px">
+<table class="font-weight-light">
+
+<tr>{%if user_profile.PhotoFile%}
+
+<td><img src="{{user_profile.PhotoFile.url}}" height="200" width="200" class="img-thumbnail"></td>
+{%endif%}
+
+
+    <td><br>{{user_profile.Fname}}  {{user_profile.Lname}}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{user_profile.like_link}}">{% if do_i_like%}Unlike{%else%}Like{%endif%}</a><br>
+        {% if mutual_like%} You are connected!{%endif%}
+        <br>
+    {{user_profile.id}}<br>
+
+        Match percentage = {{match.get_percent|floatformat:2}}%
+    <hr width="300px">
+        {{user_profile.age}} yrs,
+        &nbsp;{{user_profile.YourHeight}} ft &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{user_profile.MaritalStatus}}<br>
+
+         {{user_profile.MotherTongue}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lives in {{user_profile.Country.name}}<br>
+
+        {{user_profile.Religion}},{{user_profile.Community}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+
+
+
+
+
+
+
+</tr>
+
+    </table>
+    </nav>
+
+
+
+<div style=" background-color: white;margin-top: 50px; height: 1200px;width: 500px;
+    margin-left: 300px;">
+   <p style="margin-right: 350px; color: #5897fb"> <img src="{% static 'home/aboutme.jpg' %}" height="50"    width="50" class="img-thumbnail">
+    About You <hr></p>
+    <p style="margin-right: 350px">{{user_profile.aboutYou}}</p><br>
+
+    {% if mutual_like%}<p style="margin-right: 370px; color: #5897fb"> <img src="{% static 'home/telephone.jpg' %}" height="50"    width="50" class="img-thumbnail">
+    Contact <hr ></p>
+    <p style="margin-right: 360px"><p><img src="{% static 'home/email.png' %}" height="25"    width="25" class="img-thumbnail">
+    Email</p>{{user_profile.Email}}</p>Telephone :-{{user_profile.MobileNo}}{%endif%}<br>
+
+    <p style="margin-right: 345px; color: #5897fb"> <img src="{% static 'home/background.jpeg' %}" height="50"    width="50" class="img-thumbnail">
+    Background <hr></p>
+    <p style="margin-right: 350px">{{user_profile.Religion}}, &nbsp;{{user_profile.MotherTongue}}&nbsp;<br>
+    <p style="margin-right: 400px">{{user_profile.Community}}</p>
+    </p><br>
+
+    <p style="margin-right: 275px; color: #5897fb"> <img src="{% static 'home/education.jpg' %}" height="50"    width="50" class="img-thumbnail">
+    Education and Career <hr></p>
+    <p style="margin-right: 200px"><br>{{user_profile.EducationLevel}} degree in {{user_profile.EducationField}}&nbsp;from {{user_profile.CollegeYouAttend}}</p><br>
+    <p style="margin-right: 350px">Currently {{user_profile.YouWorkWith}}</p><br>
+
+
+ <p style="margin-right: 345px; color: #5897fb"> <img src="{% static 'home/LifestyleandAppearance.jpg' %}" height="50"    width="50" class="img-thumbnail">
+    Lifestyle and Appearance <hr></p>
+    <p style="margin-right: 200px"><br>Diet:{{user_profile.Diet}} <br> Smoke?{{smoke}}&nbsp; <br>Drink?{{drink}}</p><br>
+
+    <p>Partner's Preference</p>
+    <hr>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

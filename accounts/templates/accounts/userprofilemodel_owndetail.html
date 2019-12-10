@@ -1,0 +1,103 @@
+{%extends 'accounts/base1.html'%}
+
+{% block body %}
+
+
+<style>
+
+    hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+</style>
+{% load static %}
+
+    <nav class="navbar navbar-light navbar-expand-md" style="background-color: white; height: 200px; width: 800px;margin-top: 100px">
+<table class="font-weight-light">
+
+<tr>{%if user_profile.PhotoFile%}
+
+<td><img src="{{user_profile.PhotoFile.url}}" height="300" width="200" class="img-thumbnail"></td>
+{%endif%}
+
+    <td><br>{{user_profile.Fname}}  {{user_profile.Lname}}
+
+    <hr width="300px">
+        {{user_profile.age}} yrs,
+        &nbsp;{{user_profile.YourHeight}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{user_profile.MaritalStatus}}<br>
+
+         {{user_profile.MotherTongue}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lives in {{user_profile.Country}}<br>
+
+        {{user_profile.Religion}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+
+        {{user_profile.EducationLevel}} degree in {{user_profile.EducationField}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+
+
+
+
+
+
+
+</tr>
+
+    </table>
+    </nav>
+
+
+
+<div style=" background-color: white;margin-top: 100px; height: 700px;width: 500px;
+    margin-left: 300px;">
+   <p style="margin-right: 350px; color: #5897fb"> <img src="{% static 'home/aboutme.jpg' %}" height="50"    width="50" class="img-thumbnail">
+    About You <hr></p>
+    <p style="margin-right: 350px">{{user_profile.aboutYou}}</p><br>
+
+    <p style="margin-right: 370px; color: #5897fb"> <img src="{% static 'home/telephone.jpg' %}" height="50"    width="50" class="img-thumbnail">
+    Contact <hr ></p>
+
+    <p style="margin-right: 360px"><p>
+    Email:-{{user_profile.Email}}<br>
+    Telephone :-{{user_profile.MobileNo}}
+
+    <p style="margin-right: 345px; color: #5897fb"> <img src="{% static 'home/background.jpeg' %}" height="50"    width="50" class="img-thumbnail">
+    Background <hr></p>
+
+    <p style="margin-right: 350px">
+        Religion:-{{user_profile.Religion}} &nbsp;&nbsp;<br>
+        Mother Tongue:- {{user_profile.MotherTongue}}<br>
+    Community:-{{user_profile.Community}}
+    </p><br>
+
+    <p style="margin-right: 275px; color: #5897fb"> <img src="{% static 'home/education.jpg' %}" height="50"    width="50" class="img-thumbnail">
+    Education and Career <hr></p>
+    <p style="margin-right: 200px"><br>{{user_profile.EducationLevel}} degree in {{user_profile.EducationField}}&nbsp;from {{user_profile.CollegeYouAttend}}</p><br>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

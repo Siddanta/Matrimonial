@@ -1,0 +1,347 @@
+{% extends 'accounts/base1.html'%}
+{%block body%}
+<html>
+<head></head>
+<body>
+<form method="GET" action="{% url 'accounts:search'%}"  >
+    {% csrf_token%}
+    <!--Age: from <input  type="number" name="min_age"  min="18" max="50"  placeholder="Min">-->
+        <!--to  <input  type="number" name="max_age"  min="18" max="50"  placeholder="Max">-->
+<br>
+	<br>
+    Religion: <select name="Religion" placeholder="Religion" id="input"  >
+
+	<option name='Hindu' value="hindu">Hindu</option>
+            <option name='Christian' value="christian">Christian</option>
+            <option name='Muslim' value="Muslim">Muslim</option>
+            <option name='other' value="other">other</option>
+            <option name='Buddhist' value="buddhist">Buddhist</option>
+</select>
+    <br>
+	<br>
+    Community: <select name="Community" >
+
+	<option     name="Community" value="Brahmin">Brahmin</option>
+            <option name="Community" value="Chhetri">Chhetri</option>
+            <option name="Community" value="Newar">Newar</option>
+            <option name="Community" value="Thakuri">Thakuri</option>
+            <option name="Community" valut="Gurung">Gurung</option>
+
+</select>
+<br>
+	<br>
+   MaritalStatus: <select name="MaritalStatus" >
+
+    <option name="MaritalStatus" value="Never Married">Never Married</option>
+
+            <option name="MaritalStatus" value="Married">Married</option>
+            <option name="MaritalStatus" value="Divorced">Divorced</option>
+            <option name="MaritalStatus" value="Awaited Divorce">Awaited Divorce</option>
+            <option name="MaritalStatus"  value="Widowed">Widowed</option>
+            <option name="MaritalStatus" value="Annulled">Annulled</option>
+</select>
+    <br>
+
+
+
+    <br>
+    Country:<select name="Country">
+
+
+	<option name=“Country”  value="AF">Afghanistan</option>
+	<option name=“Country”  value="AX">Åland Islands</option>
+	<option name=“Country”  value="AL">Albania</option>
+	<option name=“Country”  value="DZ">Algeria</option>
+	<option name=“Country”  value="AS">American Samoa</option>
+	<option name=“Country”  value="AD">Andorra</option>
+	<option name=“Country”  value="AO">Angola</option>
+	<option name=“Country”  value="AI">Anguilla</option>
+	<option name=“Country”  value="AQ">Antarctica</option>
+	<option name=“Country”  value="AG">Antigua and Barbuda</option>
+	<option name=“Country”  value="AR">Argentina</option>
+	<option name=“Country”  value="AM">Armenia</option>
+	<option name=“Country”  value="AW">Aruba</option>
+	<option name=“Country”  value="AU">Australia</option>
+	<option name=“Country”  value="AT">Austria</option>
+	<option name=“Country”  value="AZ">Azerbaijan</option>
+	<option name=“Country”  value="BS">Bahamas</option>
+	<option name=“Country”  value="BH">Bahrain</option>
+	<option name=“Country”  value="BD">Bangladesh</option>
+	<option name=“Country”  value="BB">Barbados</option>
+	<option name=“Country”  value="BY">Belarus</option>
+	<option name=“Country”  value="BE">Belgium</option>
+	<option name=“Country”  value="BZ">Belize</option>
+	<option name=“Country”  value="BJ">Benin</option>
+	<option name=“Country”  value="BM">Bermuda</option>
+	<option name=“Country”  value="BT">Bhutan</option>
+	<option name=“Country”  value="BO">Bolivia, Plurinational State of</option>
+	<option name=“Country”  value="BQ">Bonaire, Sint Eustatius and Saba</option>
+	<option name=“Country”  value="BA">Bosnia and Herzegovina</option>
+	<option name=“Country”  value="BW">Botswana</option>
+	<option name=“Country”  value="BV">Bouvet Island</option>
+	<option name=“Country”  value="BR">Brazil</option>
+	<option name=“Country”  value="IO">British Indian Ocean Territory</option>
+	<option name=“Country”  value="BN">Brunei Darussalam</option>
+	<option name=“Country”  value="BG">Bulgaria</option>
+	<option name=“Country”  value="BF">Burkina Faso</option>
+	<option name=“Country”  value="BI">Burundi</option>
+	<option name=“Country”  value="KH">Cambodia</option>
+	<option name=“Country”  value="CM">Cameroon</option>
+	<option name=“Country”  value="CA">Canada</option>
+	<option name=“Country”  value="CV">Cape Verde</option>
+	<option name=“Country”  value="KY">Cayman Islands</option>
+	<option name=“Country”  value="CF">Central African Republic</option>
+	<option name=“Country”  value="TD">Chad</option>
+	<option name=“Country”  value="CL">Chile</option>
+	<option name=“Country”  value="CN">China</option>
+	<option name=“Country”  value="CX">Christmas Island</option>
+	<option name=“Country”  value="CC">Cocos (Keeling) Islands</option>
+	<option name=“Country”  value="CO">Colombia</option>
+	<option name=“Country”  value="KM">Comoros</option>
+	<option name=“Country”  value="CG">Congo</option>
+	<option name=“Country”  value="CD">Congo, the Democratic Republic of the</option>
+	<option name=“Country”  value="CK">Cook Islands</option>
+	<option name=“Country”  value="CR">Costa Rica</option>
+	<option name=“Country”  value="CI">Côte d'Ivoire</option>
+	<option name=“Country”  value="HR">Croatia</option>
+	<option name=“Country”  value="CU">Cuba</option>
+	<option name=“Country”  value="CW">Curaçao</option>
+	<option name=“Country”  value="CY">Cyprus</option>
+	<option name=“Country”  value="CZ">Czech Republic</option>
+	<option name=“Country”  value="DK">Denmark</option>
+	<option name=“Country”  value="DJ">Djibouti</option>
+	<option name=“Country”  value="DM">Dominica</option>
+	<option name=“Country”  value="DO">Dominican Republic</option>
+	<option name=“Country”  value="EC">Ecuador</option>
+	<option name=“Country”  value="EG">Egypt</option>
+	<option name=“Country”  value="SV">El Salvador</option>
+	<option name=“Country”  value="GQ">Equatorial Guinea</option>
+	<option name=“Country”  value="ER">Eritrea</option>
+	<option name=“Country”  value="EE">Estonia</option>
+	<option name=“Country”  value="ET">Ethiopia</option>
+	<option name=“Country”  value="FK">Falkland Islands (Malvinas)</option>
+	<option name=“Country”  value="FO">Faroe Islands</option>
+	<option name=“Country”  value="FJ">Fiji</option>
+	<option name=“Country”  value="FI">Finland</option>
+	<option name=“Country”  value="FR">France</option>
+	<option name=“Country”  value="GF">French Guiana</option>
+	<option name=“Country”  value="PF">French Polynesia</option>
+	<option name=“Country”  value="TF">French Southern Territories</option>
+	<option name=“Country”  value="GA">Gabon</option>
+	<option name=“Country”  value="GM">Gambia</option>
+	<option name=“Country”  value="GE">Georgia</option>
+	<option name=“Country”  value="DE">Germany</option>
+	<option name=“Country”  value="GH">Ghana</option>
+	<option name=“Country”  value="GI">Gibraltar</option>
+	<option name=“Country”  value="GR">Greece</option>
+	<option name=“Country”  value="GL">Greenland</option>
+	<option name=“Country”  value="GD">Grenada</option>
+	<option name=“Country”  value="GP">Guadeloupe</option>
+	<option name=“Country”  value="GU">Guam</option>
+	<option name=“Country”  value="GT">Guatemala</option>
+	<option name=“Country”  value="GG">Guernsey</option>
+	<option name=“Country”  value="GN">Guinea</option>
+	<option name=“Country”  value="GW">Guinea-Bissau</option>
+	<option name=“Country”  value="GY">Guyana</option>
+	<option name=“Country”  value="HT">Haiti</option>
+	<option name=“Country”  value="HM">Heard Island and McDonald Islands</option>
+	<option name=“Country”  value="VA">Holy See (Vatican City State)</option>
+	<option name=“Country”  value="HN">Honduras</option>
+	<option name=“Country”  value="HK">Hong Kong</option>
+	<option name=“Country”  value="HU">Hungary</option>
+	<option name=“Country”  value="IS">Iceland</option>
+	<option name=“Country”  value="IN">India</option>
+	<option name=“Country”  value="ID">Indonesia</option>
+	<option name=“Country”  value="IR">Iran, Islamic Republic of</option>
+	<option name=“Country”  value="IQ">Iraq</option>
+	<option name=“Country”  value="IE">Ireland</option>
+	<option name=“Country”  value="IM">Isle of Man</option>
+	<option name=“Country”  value="IL">Israel</option>
+	<option name=“Country”  value="IT">Italy</option>
+	<option name=“Country”  value="JM">Jamaica</option>
+	<option name=“Country”  value="JP">Japan</option>
+	<option name=“Country”  value="JE">Jersey</option>
+	<option name=“Country”  value="JO">Jordan</option>
+	<option name=“Country”  value="KZ">Kazakhstan</option>
+	<option name=“Country”  value="KE">Kenya</option>
+	<option name=“Country”  value="KI">Kiribati</option>
+	<option name=“Country”  value="KP">Korea, Democratic People's Republic of</option>
+	<option name=“Country”  value="KR">Korea, Republic of</option>
+	<option name=“Country”  value="KW">Kuwait</option>
+	<option name=“Country”  value="KG">Kyrgyzstan</option>
+	<option name=“Country”  value="LA">Lao People's Democratic Republic</option>
+	<option name=“Country”  value="LV">Latvia</option>
+	<option name=“Country”  value="LB">Lebanon</option>
+	<option name=“Country”  value="LS">Lesotho</option>
+	<option name=“Country”  value="LR">Liberia</option>
+	<option name=“Country”  value="LY">Libya</option>
+	<option name=“Country”  value="LI">Liechtenstein</option>
+	<option name=“Country”  value="LT">Lithuania</option>
+	<option name=“Country”  value="LU">Luxembourg</option>
+	<option name=“Country”  value="MO">Macao</option>
+	<option name=“Country”  value="MK">Macedonia, the former Yugoslav Republic of</option>
+	<option name=“Country”  value="MG">Madagascar</option>
+	<option name=“Country”  value="MW">Malawi</option>
+	<option name=“Country”  value="MY">Malaysia</option>
+	<option name=“Country”  value="MV">Maldives</option>
+	<option name=“Country”  value="ML">Mali</option>
+	<option name=“Country”  value="MT">Malta</option>
+	<option name=“Country”  value="MH">Marshall Islands</option>
+	<option name=“Country”  value="MQ">Martinique</option>
+	<option name=“Country”  value="MR">Mauritania</option>
+	<option name=“Country”  value="MU">Mauritius</option>
+	<option name=“Country”  value="YT">Mayotte</option>
+	<option name=“Country”  value="MX">Mexico</option>
+	<option name=“Country”  value="FM">Micronesia, Federated States of</option>
+	<option name=“Country”  value="MD">Moldova, Republic of</option>
+	<option name=“Country”  value="MC">Monaco</option>
+	<option name=“Country”  value="MN">Mongolia</option>
+	<option name=“Country”  value="ME">Montenegro</option>
+	<option name=“Country”  value="MS">Montserrat</option>
+	<option name=“Country”  value="MA">Morocco</option>
+	<option name=“Country”  value="MZ">Mozambique</option>
+	<option name=“Country”  value="MM">Myanmar</option>
+	<option name=“Country”  value="NA">Namibia</option>
+	<option name=“Country”  value="NR">Nauru</option>
+	<option name=“Country”  value="NP">Nepal</option>
+	<option name=“Country”  value="NL">Netherlands</option>
+	<option name=“Country”  value="NC">New Caledonia</option>
+	<option name=“Country”  value="NZ">New Zealand</option>
+	<option name=“Country”  value="NI">Nicaragua</option>
+	<option name=“Country”  value="NE">Niger</option>
+	<option name=“Country”  value="NG">Nigeria</option>
+	<option name=“Country”  value="NU">Niue</option>
+	<option name=“Country”  value="NF">Norfolk Island</option>
+	<option name=“Country”  value="MP">Northern Mariana Islands</option>
+	<option name=“Country”  value="NO">Norway</option>
+	<option name=“Country”  value="OM">Oman</option>
+	<option name=“Country”  value="PK">Pakistan</option>
+	<option name=“Country”  value="PW">Palau</option>
+	<option name=“Country”  value="PS">Palestinian Territory, Occupied</option>
+	<option name=“Country”  value="PA">Panama</option>
+	<option name=“Country”  value="PG">Papua New Guinea</option>
+	<option name=“Country”  value="PY">Paraguay</option>
+	<option name=“Country”  value="PE">Peru</option>
+	<option name=“Country”  value="PH">Philippines</option>
+	<option name=“Country”  value="PN">Pitcairn</option>
+	<option name=“Country”  value="PL">Poland</option>
+	<option name=“Country”  value="PT">Portugal</option>
+	<option name=“Country”  value="PR">Puerto Rico</option>
+	<option name=“Country”  value="QA">Qatar</option>
+	<option name=“Country”  value="RE">Réunion</option>
+	<option name=“Country”  value="RO">Romania</option>
+	<option name=“Country”  value="RU">Russian Federation</option>
+	<option name=“Country”  value="RW">Rwanda</option>
+	<option name=“Country”  value="BL">Saint Barthélemy</option>
+	<option name=“Country”  value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+	<option name=“Country”  value="KN">Saint Kitts and Nevis</option>
+	<option name=“Country”  value="LC">Saint Lucia</option>
+	<option name=“Country”  value="MF">Saint Martin (French part)</option>
+	<option name=“Country”  value="PM">Saint Pierre and Miquelon</option>
+	<option name=“Country”  value="VC">Saint Vincent and the Grenadines</option>
+	<option name=“Country”  value="WS">Samoa</option>
+	<option name=“Country”  value="SM">San Marino</option>
+	<option name=“Country”  value="ST">Sao Tome and Principe</option>
+	<option name=“Country”  value="SA">Saudi Arabia</option>
+	<option name=“Country”  value="SN">Senegal</option>
+	<option name=“Country”  value="RS">Serbia</option>
+	<option name=“Country”  value="SC">Seychelles</option>
+	<option name=“Country”  value="SL">Sierra Leone</option>
+	<option name=“Country”  value="SG">Singapore</option>
+	<option name=“Country”  value="SX">Sint Maarten (Dutch part)</option>
+	<option name=“Country”  value="SK">Slovakia</option>
+	<option name=“Country”  value="SI">Slovenia</option>
+	<option name=“Country”  value="SB">Solomon Islands</option>
+	<option name=“Country”  value="SO">Somalia</option>
+	<option name=“Country”  value="ZA">South Africa</option>
+	<option name=“Country”  value="GS">South Georgia and the South Sandwich Islands</option>
+	<option name=“Country”  value="SS">South Sudan</option>
+	<option name=“Country”  value="ES">Spain</option>
+	<option name=“Country”  value="LK">Sri Lanka</option>
+	<option name=“Country”  value="SD">Sudan</option>
+	<option name=“Country”  value="SR">Suriname</option>
+	<option name=“Country”  value="SJ">Svalbard and Jan Mayen</option>
+	<option name=“Country”  value="SZ">Swaziland</option>
+	<option name=“Country”  value="SE">Sweden</option>
+	<option name=“Country”  value="CH">Switzerland</option>
+	<option name=“Country”  value="SY">Syrian Arab Republic</option>
+	<option name=“Country”  value="TW">Taiwan, Province of China</option>
+	<option name=“Country”  value="TJ">Tajikistan</option>
+	<option name=“Country”  value="TZ">Tanzania, United Republic of</option>
+	<option name=“Country”  value="TH">Thailand</option>
+	<option name=“Country”  value="TL">Timor-Leste</option>
+	<option name=“Country”  value="TG">Togo</option>
+	<option name=“Country”  value="TK">Tokelau</option>
+	<option name=“Country”  value="TO">Tonga</option>
+	<option name=“Country”  value="TT">Trinidad and Tobago</option>
+	<option name=“Country”  value="TN">Tunisia</option>
+	<option name=“Country”  value="TR">Turkey</option>
+	<option name=“Country”  value="TM">Turkmenistan</option>
+	<option name=“Country”  value="TC">Turks and Caicos Islands</option>
+	<option name=“Country”  value="TV">Tuvalu</option>
+	<option name=“Country”  value="UG">Uganda</option>
+	<option name=“Country”  value="UA">Ukraine</option>
+	<option name=“Country”  value="AE">United Arab Emirates</option>
+	<option name=“Country”  value="GB">United Kingdom</option>
+	<option name=“Country”  value="US">United States</option>
+	<option name=“Country”  value="UM">United States Minor Outlying Islands</option>
+	<option name=“Country”  value="UY">Uruguay</option>
+	<option name=“Country”  value="UZ">Uzbekistan</option>
+	<option name=“Country”  value="VU">Vanuatu</option>
+	<option name=“Country”  value="VE">Venezuela, Bolivarian Republic of</option>
+	<option name=“Country”  value="VN">Viet Nam</option>
+	<option name=“Country”  value="VG">Virgin Islands, British</option>
+	<option name=“Country”  value="VI">Virgin Islands, U.S.</option>
+	<option name=“Country”  value="WF">Wallis and Futuna</option>
+	<option name=“Country”  value="EH">Western Sahara</option>
+	<option name=“Country”  value="YE">Yemen</option>
+	<option name=“Country”  value="ZM">Zambia</option>
+	<option name=“Country”  value="ZW">Zimbabwe</option>
+</select>
+    <br>
+    <button type="submit">search</button>
+</form>
+
+
+{%if queryset1 %}
+
+{% for k in queryset1 %}
+ {%if k.PhotoFile%}
+
+<a href="{% url 'accounts:detail' k%}"><img src="{{k.PhotoFile.url}}" class="img-rounded" width=100px><br></a>
+
+{%endif%}
+<hr width="300px">
+Username:-{{k}}<br>
+Age:-{{k.age}}<br>
+Religion:-{{k.Religion}}<br>
+Community:-{{k.Community}}<br>
+MaritalStatus:-{{k.MaritalStatus}}<br>
+Gender:-{{k.Gender}}<br>
+Country:-{{k.Country.name}}<br>
+<br>
+<br>
+<br>
+   <!--<li> {{k.Fname}} {{k.Lname}}</li>-->
+<!--<li>{{k.Gender}}</li>-->
+<!--<li>{{k.Religion}}</li>-->
+<!--<li>{{k.MaritalStatus}}</li>-->
+<!--<li>{{k.Community}}</li>-->
+<!--<li>{{k.Country.name}}</li>-->
+<!--<li>{{k.age}}</li>-->
+<!--<br>-->
+{% endfor %}
+
+{%else%}
+<h1>NOT FOUND</h1>
+<br>
+<br>
+<br>
+
+{%endif%}
+
+</body>
+</html>
+{% endblock %}
+
+

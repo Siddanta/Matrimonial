@@ -1,0 +1,10 @@
+{%extends 'accounts/base1.html' %}
+{% block body%}
+<form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+
+    <button type="submit" href="{%url 'accounts:edit_register2' user.id%}">Submit</button>
+
+</form>
+{%endblock%}

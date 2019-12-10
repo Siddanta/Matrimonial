@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block body %}
+
+
+
+<div class="container">
+
+<form action="" method="post">
+    {% csrf_token %}
+
+
+
+    {{ form.as_p}}
+
+        <div class="submit-row" style="margin-bottom:8px;padding-top:0px; width: 300px;margin-left: 400px;color: #f7f7f7"><button class="btn btn-primary btn-block box-shadow" type="submit" id="submit-id-submit" style="color: #f7f7f7">Login</button>
+<div id="login-box-footer" style="padding:10px 20px;padding-bottom:23px;padding-top:18px;">
+        <p style="margin-bottom:0px;">Don't you have an account?<a href="../../accounts/register" id="register-link">Sign Up!</a></p>
+    </div>
+        </div>
+</form>
+</div>
+{% endblock %}

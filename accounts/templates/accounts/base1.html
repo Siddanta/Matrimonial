@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>prooject</title>
+    <style>
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px ;
+    z-index: 1;
+}
+
+.dropdown-content a {
+
+
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {background-color:white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: black;}
+</style>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    {% load static %}
+
+</head>
+
+<body style="background-color:honeydew;">
+    <nav class="navbar navbar-dark bg-dark" style="height: 70px">
+        <div class="container-fluid"><a class="navbar-brand" href="../../accounts/afterLogin" style="font-family:Cookie, cursive;font-size:35px;color:pink;"><img class="rounded-circle d-inline visible" src="{% static 'home/LG.jpg' %}" id="logo" style="background-color:white;background-position:top;height: 50px">&nbsp; &nbsp; &nbsp;<em></em></a>
+
+            <div class="container site_selection" style="margin-left:750px;background-size:auto;width:500px; ">
+
+
+
+
+
+
+            <button   class="btn btn-outline-secondary" ><a class="div1" href="../../../accounts/search" style="text-decoration: none;color:white;">Search</a></button>
+            <button   class="btn btn-outline-secondary" ><a class="div1" href="../../questions/match_all" style="text-decoration: none;color:white;">Match-making</a></button>
+
+               <div class="dropdown" >
+  <button class="btn btn-outline-secondary"  >&#9660;</button>
+  <div class="dropdown-content">
+    <a href="../../accounts/profile" style="text-decoration:none ;color:black;border: none">Profile</a>
+      <a href='../../accounts/edit_all' class="div1" href="" style="text-decoration: none;color:black;">Edit your Profile</a>
+
+    <a href="../../accounts/logout" style="text-decoration:none ;color:black;border: none">Logout</a>
+
+
+
+  </div>
+
+</div>
+</div>
+</div>
+
+
+    </nav>
+
+{% block body %}
+{% endblock %}
+{%block content%}
+{% endblock %}
