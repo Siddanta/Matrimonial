@@ -1,0 +1,9 @@
+{%extends 'accounts/base1.html' %}
+{% block body%}
+    <nav class="navbar navbar-light bg-light" >
+<nav class="navbar navbar-light bg-light" style="margin-left: 400px">
+    {% include "questions/form.html" with instance=question_instance form=question_form%}
+</nav>
+
+    </nav>
+{%endblock%}
